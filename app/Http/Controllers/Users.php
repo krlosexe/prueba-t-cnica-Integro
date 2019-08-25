@@ -68,6 +68,17 @@ class Users extends Controller
         	return response()->json(['success'=> false, 'error'=> $validator->messages()->all()]);
         }
 
+
+
+        $reg_password = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*)([A-Za-z\d$@$!%*?&]|[^ ]){4,150}$/';
+
+        if(!preg_match($reg_password, $request["password"])) {
+            return response()->json(['success'=> false, 'error'=> array("Su password debe contener mínimo una mayúscula, minuscula y un número")]);
+        }
+
+
+        
+
         
         try{
             $user = User::find($request["id"]);
