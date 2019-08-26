@@ -26,7 +26,7 @@
                 <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Año') }}</label>
 
                 <div class="col-md-3">
-                    <input id="year" type="number" class="form-control @error('year') is-invalid @enderror" name="year" required autocomplete="new-year" max="<?= date("Y")?>">
+                    <input id="year" type="number" class="form-control @error('year') is-invalid @enderror" name="year" required autocomplete="new-year" max="<?= date("Y")?>" min="1">
                 </div>
             </div>
             <br>
