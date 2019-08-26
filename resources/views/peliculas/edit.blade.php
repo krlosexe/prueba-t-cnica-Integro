@@ -16,10 +16,11 @@
             </div>
 
             <div class="form-group row">
-                <label for="nick" class="col-md-4 col-form-label text-md-right">{{ __('Sinopsis') }}</label>
+                <label for="sinopsis_edit" class="col-md-4 col-form-label text-md-right">{{ __('Sinopsis') }}</label>
 
                 <div class="col-md-6">
-                    <input id="sinopsis_edit" type="text" class="form-control @error('sinopsis') is-invalid @enderror" name="sinopsis" value="{{ old('sinopsis') }}" autocomplete="sinopsis">
+                    <textarea class="form-control" name="sinopsis" id="sinopsis_edit" cols="30" rows="5"></textarea>
+                    
                 </div>
             </div>
 
